@@ -1,0 +1,26 @@
+# KisanRakshak Backend – Phase 1 Dependencies
+# Python 3.11+ (tested with Python 3.14 on Windows)
+# Using flexible version bounds so pip resolves wheels compatible with
+# the installed Python version (avoids Rust/MSVC source-build failures).
+
+# Web framework
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.6
+
+# Database
+sqlalchemy>=2.0.35
+psycopg[binary]>=3.2.10
+alembic>=1.13.3
+geoalchemy2>=0.15.2
+
+# Pydantic & settings
+# pydantic-core 2.27+ ships cp314 wheels — do NOT pin to 2.9.x
+pydantic>=2.10.0
+pydantic-settings>=2.5.2
+
+# Auth / security
+passlib[bcrypt]>=1.7.4
+python-jose[cryptography]>=3.3.0
+
+# Utilities
+python-dotenv>=1.0.1
